@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Java_Util {
 
-	//年を分けるメソッド
+	// 年を分けるメソッド
 	public int buildYear(String nen) {
 		StringBuilder buildYear = new StringBuilder();
 		String[] monthArray = nen.split("");
@@ -24,7 +24,7 @@ public class Java_Util {
 		return year;
 	}
 
-	//月を分けるメソッド
+	// 月を分けるメソッド
 	public int buildMonth(String tuki) {
 		StringBuilder buildMonth = new StringBuilder();
 		String[] monthArray = tuki.split("");
@@ -36,7 +36,7 @@ public class Java_Util {
 		return month;
 	}
 
-	//月の最終日取得メソッド
+	// 月の最終日取得メソッド
 	public int getMaximumDay(int year, int month) {
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.YEAR, year);
@@ -46,7 +46,7 @@ public class Java_Util {
 
 	}
 
-	//月の初日から最終日までを日付をつけてコレクションに収納するメソッド
+	// 月の初日から最終日までを日付をつけてコレクションに収納するメソッド
 	public List<String> monthDays(int year, int month, int maxDay) {
 		List<String> monthDayList = new ArrayList<>();
 		Calendar cal = Calendar.getInstance();
@@ -85,7 +85,7 @@ public class Java_Util {
 		return monthDayList;
 	}
 
-	//取得した日付の曜日を返すメソッド
+	// 取得した日付の曜日を返すメソッド
 
 	public String workDays(String day) {
 		String dayOfTheWeek = null;
@@ -108,7 +108,7 @@ public class Java_Util {
 		return dayOfTheWeek;
 	}
 
-	//取得した日付の曜日を返すメソッド
+	// 取得した日付の曜日を返すメソッド
 	public boolean BooleanWorkDays(String day) {
 
 		if (day.contains("日")) {
@@ -137,7 +137,7 @@ public class Java_Util {
 		}
 	}
 
-	//現在時刻をタイムスタンプ型に変換するメソッド
+	// 現在時刻をタイムスタンプ型に変換するメソッド
 	public Timestamp changeSqlTime() {
 
 		Timestamp timeStamp = new Timestamp(System.currentTimeMillis());
@@ -160,7 +160,7 @@ public class Java_Util {
 
 	}
 
-	//現在の日時をデート型に変換するメソッド
+	// 現在の日時をデート型に変換するメソッド
 	public Date changeSqlDate() {
 		LocalDateTime nowTime = LocalDateTime.now();
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd");
